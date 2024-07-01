@@ -15,6 +15,8 @@ python3 wow-fish-bot.py
 # windows
 python3.exe -m pip install requirements_windows.txt
 python3.exe wow-fish-bot.py
+
+or alternatively download the .exe binary from the releases section
 ```
 
 
