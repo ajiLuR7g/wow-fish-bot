@@ -6,11 +6,21 @@ import cv2
 import sys
 from PIL import ImageGrab
 import subprocess
+import platform
+
+if platform.system() == "Windows":
+    import win32gui
 
 def get_active_window_title():
     try:
-        result = subprocess.run(['xdotool', 'getactivewindow', 'getwindowname'], stdout=subprocess.PIPE, text=True)
-        return result.stdout.strip()
+        if platform.system() == "Windows":
+            window = win32gui.GetForegroundWindow()
+            return win32gui.GetWindowText(window)
+        elif platform.system() == "Linux":
+            result = subprocess.run(['xdotool', 'getactivewindow', 'getwindowname'], stdout=subprocess.PIPE, text=True)
+            return result.stdout.strip()
+        else:
+            return "Unsupported OS"
     except Exception as e:
         print(f"Error checking active window: {e}")
         return ""
