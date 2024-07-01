@@ -6,7 +6,16 @@
 3. Hide World of Warcraft UI (ALT + Z)
 4. Full camera zoom
 5. WoW window needs to be maximized on the screen
-6. Run `python3 wow-fish-bot.py`
+6. Install dependencies and run the script:
+```
+# linux
+python3 -m pip install -r requirements.txt
+python3 wow-fish-bot.py
+
+# windows
+python3.exe -m pip install requirements_windows.txt
+python3.exe wow-fish-bot.py
+```
 
 
 
