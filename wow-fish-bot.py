@@ -8,25 +8,6 @@ from PIL import ImageGrab
 import subprocess
 import platform
 
-if platform.system() == "Windows":
-    import win32gui
-
-def get_active_window_title():
-    try:
-        if platform.system() == "Windows":
-            window = win32gui.GetForegroundWindow()
-            return win32gui.GetWindowText(window)
-        elif platform.system() == "Linux":
-            result = subprocess.run(['xdotool', 'getactivewindow', 'getwindowname'], stdout=subprocess.PIPE, text=True)
-            return result.stdout.strip()
-        else:
-            return "Unsupported OS"
-    except Exception as e:
-        print(f"Error checking active window: {e}")
-        return ""
-
-def is_wow_active():
-    return "World of Warcraft" in get_active_window_title()
 
 def current_timestamp():
     return datetime.now().strftime('%H:%M:%S')
@@ -53,11 +34,6 @@ if __name__ == "__main__":
     print("1...", flush=True)
     time.sleep(1)
 
-    if is_wow_active():
-        print("[*] World of Warcraft is the active window. Starting.")
-    else:
-        print("[!] World of Warcraft is not the active window. Exiting.")
-        sys.exit(1)
 
     print(f"[*] {current_timestamp()} Bot started")
     while flag_exit is False:
