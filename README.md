@@ -15,10 +15,13 @@ python3 -m pip install -r requirements.txt
 python3 wow-fish-bot.py
 
 # windows
-python3.exe -m pip install requirements_windows.txt
-python3.exe wow-fish-bot.py
+python.exe -m pip install requirements_windows.txt
+python.exe wow-fish-bot.py
 
 or alternatively download the .exe binary from the releases section
+
+To create a new .exe from the code, install the requirements and run
+python.exe -m PyInstaller --onefile wow-fish-bot.py
 ```
 
 - Tested on areas: Orgrimmar, near WC dungeon and Ratchet, Stormwind Canals
