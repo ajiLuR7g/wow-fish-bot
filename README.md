@@ -1,5 +1,7 @@
 ## Simplified, commandline-only, fork of [YECHEZ/wow-fish-bot](https://github.com/YECHEZ/wow-fish-bot) which runs on Windows AND Linux
 
+![Awesome logo](logo.png)
+
 ### How to use:
 1. Equip fishing pole
 2. Move skill 'Fishing' to slot with bind '1'
@@ -18,8 +20,6 @@ python3.exe wow-fish-bot.py
 
 or alternatively download the .exe binary from the releases section
 ```
-
-
 
 - Tested on areas: Orgrimmar, near WC dungeon and Ratchet, Stormwind Canals
 - Works good (80%)
